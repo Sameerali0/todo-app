@@ -1,7 +1,6 @@
 const todoForm = document.getElementById("todoForm");
 const todoInput = document.getElementById("todoInput");
 
-
 todoForm.addEventListener("submit",(e) => {
   e.preventDefault();
 
