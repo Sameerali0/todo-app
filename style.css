@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+#main-Container{
+    height: 600px;
+    width: 400px;
+    background-color: rgb(18, 255, 152);
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    border-radius: 50px;
+    flex-direction: column;
+    border: 2px solid rgb(255, 106, 0);
+}
+
+.todoName{
+    text-align: center;
+    border: 2px solid rgb(255, 106, 0);
+    color: #5ff707;
+    border-radius: 40px;
+    background-color: beige;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+}
+input[type=text] {
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    height: 0%;
+}
+#todoButton{
+    text-align: center;
+    border: 2px solid rgb(255, 106, 0);
+    color: #5ff707;
+    border-radius: 50px;
+    background-color: beige;
+    width: 80px; 
+    display: flex;
+    justify-content: center;
+    font-size: 400%; 
+}
+#container{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+#js-h1{
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 106, 0);;
+}
