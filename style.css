@@ -5,7 +5,7 @@ body{
     margin: 2%;
 }
 
-#main-Container{
+#mainContainer{
     height: 600px;
     width: 400px;
     background-color: rgb(18, 255, 152);
@@ -28,10 +28,10 @@ body{
     justify-content: center;
 }
 input[type=text] {
-    background: transparent;
+    background: orangered;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(2, 243, 151, 0.2);
     color: #fff;
     border-radius: 40px;
     font-size: 16px;
@@ -57,5 +57,5 @@ input[type=text] {
 #js-h1{
     display: flex;
     flex-direction: row;
-    color: rgb(255, 106, 0);;
+    color: rgb(255, 106, 0);
 }

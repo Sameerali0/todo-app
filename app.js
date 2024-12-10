@@ -8,7 +8,6 @@ function todoButtonHandler(event) {
     const inputValue = todoInput.value;
     const container = document.createElement("div");
     container.id = "container"
-    console.log(container);
     
     const h1 = document.createElement("h1");
     h1.style.display = ("inline");
@@ -22,7 +21,8 @@ function todoButtonHandler(event) {
     deleteButton.textContent = "delete"
     
     container.append(h1, editButton, deleteButton);
-    document.body.appendChild(container);
+    mainContainer.appendChild(container);
+    document.body.appendChild(mainContainer);
 
     editButton.addEventListener("click", editButtonHandler);
     function editButtonHandler(event) {
