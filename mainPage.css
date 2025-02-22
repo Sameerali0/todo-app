@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f4ee;
+    margin: 0;
+}
+
+.todo-container {
+    margin:  0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+}
+
+.header h1 {
+    font-size: 51px;
+    color: #333;
+    cursor: pointer;
+}
+
+.header button {
+    color: #333;
+    font-size: 51px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 75px;
+}
+
+.categories-tasks {
+    display: flex;
+}
+
+.categories div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.categories span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.categories .work {
+    background-color: #d2ceff;
+}
+
+.categories .study {
+    background-color: #d1e5f7;
+}
+
+.categories .entertainment {
+    background-color: #ffcece;
+}
+
+.categories .family {
+    background-color: #daf2d8;
+}
+
+.hide-done {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hide-done input{
+    cursor: pointer;
+}
+
+.done-tasks {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.hide-done label {
+    gap: 5px;
+}
+
+label {
+    display: flex;
+    cursor: pointer;
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 75px;
+    cursor: pointer;
+}
+
+.h3-3dot-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task {
+    height: fit-content;
+    background-color: #fff9df;
+    border: 1px solid #f3e0c0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 490px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.task i {
+    opacity: 0.7;
+    padding-top: 2%;
+}
+
+.task-menu {
+    background-color: #fff9f9;
+    width: 120px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 14px;
+    padding-left: 15px;
+    padding-bottom: 12px;
+    transform: translate(320px, 17px);
+    position: absolute;
+}
+
+.icon-editBtn {
+    font-size: 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.icon-deleteBtn {
+    font-size: 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.third-task-heading {
+    text-decoration: line-through;
+}
+
+.third-task-peragraph {
+    text-decoration: line-through;
+}
+
+.task h3 {
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 2%;
+}
+
+.task p {
+    font-size: 14px;
+    color: #555;
+    padding-top: 4%;
+}
+
+.task .tags-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task .tags {
+    display: flex;
+    gap: 5px;
+    padding-top: 8%;
+}
+
+.task .tags span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.task .tags .work {
+    background-color: #d2ceff;
+}
+
+.task .tags .study {
+    background-color: #d1e5f7;
+}
+
+.task .tags .entertainment {
+    background-color: #ffcece;
+}
+
+.task .tags .family {
+    background-color: #daf2d8;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+label {
+    padding-top: 8%;
+}
+
+.task h4 {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .header {
+        padding: 0;
+        margin: 20px;
+    }
+
+    .header h1 {
+        font-size: 40px;
+        color: black;
+        opacity: 0.7;
+    }
+    
+    .header button {
+        font-size: 40px;
+        color: black;
+        opacity: 0.7
+    }
+
+    .categories {
+        flex-direction: row;
+        gap: 43px;
+        margin-top: 20%;
+        padding-left: 22px;
+    }
+
+    .hide-done label {
+        display: none;
+    }
+
+    .categories-tasks {
+        display: block;
+    }
+
+    .categories  div {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .categories  span {
+        height: 25px;
+        width: 25px;
+    }
+
+    .task-list {
+        margin: 30px 20px;
+        padding: 0;
+    }
+
+    .task {
+        width: 100%;
+    }
+}
+
+
+
+
+/* modal */
+.todo-form-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction: column;
+    position: absolute;
+    top: 23%;
+    left: 21.1%;
+    display: none;
+    z-index: 1;
+}
+
+.todo-form h3{
+    padding-bottom: 10px;
+}
+
+.todo-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.todo-form-header button {
+    font-size: 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.todo-form-header .add-btn {
+    background-color: #69665c;
+    color: #ffffff;
+    padding: 10px 40px;
+    border-radius: 15px;
+}
+
+.todo-form-header .cancel-btn {
+    color: #5c504a;
+}
+
+.todo-form h3 {
+    opacity: 0.8;
+    color: #000000;
+}
+
+.todo-form input {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #f7f4ee;
+    font-size: 14px;
+    color: #333;
+}
+.todo-form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #f7f4ee;
+    font-size: 14px;
+    color: #333;
+}
+
+.todo-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.todo-tags {
+    display: flex;
+    gap: 90px;
+    padding-left: 5px;
+    padding-right: 50px;
+}
+
+.todo-tags div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.todo-tags span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.work-tag {
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: #ededed;
+    padding-left: 2%;
+}
+
+.todo-tags .work {
+    background-color: #d2ceff;
+}
+
+.todo-tags .study {
+    background-color: #d1e5f7;
+}
+
+.todo-tags .entertainment {
+    background-color: #ffcece;
+}
+
+.todo-tags .family {
+    background-color: #daf2d8;
+}
+
+@media (max-width: 500px) {
+    .todo-form-container {
+        width: 250px;
+        padding-right: 40px;
+        margin-right: 90px;
+    }
+
+    .todo-tags {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .work-tag {
+        background-color: white;
+        padding-left: 0;
+    }
+
+    .todo-form-header button {
+        font-size: 14px;
+    }
+    
+    .todo-form-header .add-btn {
+        background-color: #69665c;
+        color: #ffffff;
+        padding: 5px 15px;
+        border-radius: 7px;
+    }
+}
